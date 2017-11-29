@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="components/menu.js"></script>
 </head>
 
 
@@ -12,55 +13,12 @@
  
   <script>
   
-    (function(){
-      'use strict';
-      
-      function Menu(el, data = []){
-        this.el = el;
-        this.data = data;
-        
-          /**
-         * Формирование HTML компоненты 
-         */
-        this.render = function(){
-          el.innerHTML = `
-            <div class = "menu">
-              <span class = "menu__name">Сладости (нажми меня)!</span>
-              <ul>
-              </ul>
-            </div>
-            `;
-            
-            /**
-           * Добавляем пункты в список 
-           */
-          for(let listItem of data){
-            
-            let liTag = document.createElement('li');
-          
-            liTag.innerHTML = listItem;
-            el.querySelector('ul').append(liTag);
-          }
-        };
-         
-        this.render();
-       
-        let elem = document.querySelector('.menu__name');
-      
-        let showFunc = function(){
-          document.querySelector('ul').classList.toggle('open');
-          document.querySelector('.menu__name').classList.toggle('open');
-        };
-      
-        elem.addEventListener('click', showFunc);
-      }
-      
+    'use strict';
+   
     let myMenu = new Menu(document.querySelector('.js-app'),['Торт',
                                                               'Пончик',
                                                               'Пирожное',
                                                               'Конфета']);
-                                                              
-    })();
   
   </script>
 </body>
