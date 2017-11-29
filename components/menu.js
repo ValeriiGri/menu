@@ -10,7 +10,7 @@ function Menu(el, data = []){
         this.render = function(){
           el.innerHTML = `
             <div class = "menu">
-              <span class = "menu__name">Сладости (нажми меня)!</span>
+              <span class = "menu__name">menuTitle (click on me)!</span>
               <ul>
               </ul>
             </div>
