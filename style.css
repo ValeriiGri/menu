@@ -1,0 +1,17 @@
+ ul{
+    display:none;
+    list-style:none;
+  }
+  .menu__name::before{
+    content:'▶ ';
+    color:green;
+  }
+  .menu__name.open::before{
+    content:'▼';
+  }
+  .open{
+    display:block;
+  }
+  .menu__name{
+    cursor:pointer;
+  }
