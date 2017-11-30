@@ -16,16 +16,12 @@
     'use strict';
    
     let myMenu = new Menu(document.querySelector('.js-app'),['item_1',
-                                                              'item_2',
-                                                              'item_3',
-                                                              'item_4']);
+                                                             'item_2',
+                                                             'item_3',
+                                                             'item_4']);
 
     myMenu.render();
-
-   	document.querySelector('.menu__name').addEventListener('click', function (){
-          document.querySelector('ul').classList.toggle('open');
-          document.querySelector('.menu__name').classList.toggle('open');
-        });
+    myMenu.eventListener();
 
   </script>
 </body>

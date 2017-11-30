@@ -27,5 +27,14 @@ class Menu{
             liTag.innerHTML = listItem;
             this.el.querySelector('ul').append(liTag);
           }
-        }    
+        }
+
+        eventListener(){
+          let el = document.querySelector('.menu__name');
+
+          el.addEventListener('click', function (){
+            document.querySelector('ul').classList.toggle('open');
+            document.querySelector('.menu__name').classList.toggle('open');
+        }); 
+        }   
 }
